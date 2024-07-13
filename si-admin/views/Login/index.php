@@ -39,12 +39,12 @@
                 'password' : $('#password').val()
                 }
                 $.ajax({
-                    url:"http://localhost/web-porto/si-admin/api/auth/login.php",
+                    url:"https://beniyuliana02.amisbudi.cloud/web-porto/si-admin/api/auth/login.php",
                     method:"POST",
                     data: JSON.stringify(formData),
                     success:function(data){
                         $('#action_button').attr('disabled', false);
-                        window.location.href = 'http://localhost/web-porto//si-admin/views/users/';
+                        window.location.href = 'https://beniyuliana02.amisbudi.cloud/web-porto//si-admin/views/users/';
 
                     },
                     error: function(err) {                        

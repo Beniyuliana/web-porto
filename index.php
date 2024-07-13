@@ -29,6 +29,13 @@
     <link
       rel="stylesheet"
       href="style.css"
+      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+      <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+      <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
     />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
@@ -569,7 +576,7 @@
             }
 
             $.ajax({
-              url: "http://localhost/web-porto/si-admin/api/skills/create.php",
+              url: "https://beniyuliana02.amisbudi.cloud/web-porto/si-admin/api/skills/create.php",
               method: "POST",
               contentType: "application/json",
               data: JSON.stringify(formData),
@@ -595,7 +602,7 @@
             }
 
             $.ajax({
-              url: "http://localhost/web-porto/si-admin/api/skills/update.php",
+              url: "https://beniyuliana02.amisbudi.cloud/web-porto/si-admin/api/skills/update.php",
               method: "PUT",
               contentType: "application/json",
               data: JSON.stringify(formData),
@@ -619,7 +626,7 @@
         $.ajax({
           type: "GET",
           contentType: "application/json",
-          url: "http://localhost/web-porto/si-admin/api/skills/read.php",
+          url: "https://beniyuliana02.amisbudi.cloud/web-porto/si-admin/api/skills/read.php",
           success: function (response) {
             var json = response.body
             var dataSet = []
@@ -655,7 +662,7 @@
         $.ajax({
           type: "GET",
           contentType: "application/json",
-          url: "http://localhost/web-porto/si-admin/api/skills/read.php?id=" + id,
+          url: "https://beniyuliana02.amisbudi.cloud//web-porto/si-admin/api/skills/read.php?id=" + id,
           success: function (response) {
             $("#id").val(response.id)
             $("#user_id").val(response.user_id)
@@ -673,7 +680,7 @@
         var konfirmasiUser = confirm("Yakin untuk hapus data ?")
         if (konfirmasiUser) {
           $.ajax({
-            url: "http://localhost/web-porto/si-admin/api/skills/delete.php",
+            url: "https://beniyuliana02.amisbudi.cloud//web-porto/si-admin/api/skills/delete.php",
             method: "DELETE",
             data: JSON.stringify({
               id: id,
